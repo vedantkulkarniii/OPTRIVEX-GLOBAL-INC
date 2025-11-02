@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPTRIVEX GLOBAL INC. - Empowering Businesses Through Global Certifications</title>
+    <meta name="description" content="OPTRIVEX GLOBAL INC. provides internationally recognized ISO and customized certification programs to elevate your organization.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom styles and animations -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#F97316',
+                        secondary: '#1E293B',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer components {
+            .nav-link {
+                @apply px-4 py-2 text-gray-700 hover:text-primary transition-colors duration-300 relative;
+            }
+            .nav-link::after {
+                @apply content-[''] absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 -translate-x-1/2;
+            }
+            .nav-link:hover::after {
+                @apply w-3/4;
+            }
+            .btn {
+                @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+            }
+            .btn-primary {
+                @apply bg-primary text-white hover:bg-orange-600;
+            }
+            .card {
+                @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-200 shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gray-200">
+                        <img src="assets/og.png" alt="Logo" class="w-full h-full object-contain">
+                    </div>
+                    <a href="index.html" class="text-xl font-bold text-gray-800">
+                        OPTRIVEX GLOBAL INC.
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-2" id="main-nav">
+                    <a href="index.html" class="px-4 py-2 text-primary font-medium">Home</a>
+                    <a href="about.html" class="px-4 py-2 text-gray-700 hover:text-primary transition-colors duration-200">About</a>
+                    <a href="services.html" class="px-4 py-2 text-gray-700 hover:text-primary transition-colors duration-200">Services</a>
+                    <a href="contact.html" class="px-4 py-2 text-gray-700 hover:text-primary transition-colors duration-200">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="text-gray-700 hover:text-primary focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white shadow-lg rounded-b-lg" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1" id="mobile-nav">
+                <a href="index.html" class="block px-4 py-2 text-primary font-medium bg-gray-50 rounded-md">Home</a>
+                <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-md">About</a>
+                <a href="services.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-md">Services</a>
+                <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-md">Contact</a>
+                <a href="./cms/verify.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-md">Verify Certificate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 md:py-32 bg-gradient-to-r from-secondary to-gray-800 text-white overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1522071820081-009c2fbbc02a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                 alt="Professional business team" 
+                 class="w-full h-full object-cover opacity-30">
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:w-2/3">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
+                    Empowering Businesses Through Global Certifications
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 animate-fade-in animate-delay-100">
+                    OPTRIVEX GLOBAL INC. provides internationally recognized ISO and customized certification programs to elevate your organization.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in animate-delay-200">
+                    <a href="services.html" class="btn btn-primary text-center">
+                        Explore Our Services
+                    </a>
+                    <a href="contact.html" class="btn bg-white text-secondary hover:bg-gray-100 text-center">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Why Choose OPTRIVEX GLOBAL INC.?</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card p-6">
+                    <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-secondary">Trusted Experts</h3>
+                    <p class="text-gray-600">Our auditors and consultants bring decades of experience in certification and compliance.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="card p-6">
+                    <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-secondary">Global Recognition</h3>
+                    <p class="text-gray-600">Our certifications are accepted by clients and regulators worldwide, giving you a competitive edge.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="card p-6">
+                    <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-secondary">Sustainable Growth</h3>
+                    <p class="text-gray-600">We help organizations achieve lasting performance improvement and operational excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-secondary mb-6">Ready to Get Certified?</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Join thousands of businesses that trust OPTRIVEX GLOBAL INC. for their compliance and certification needs.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="contact.html" class="btn btn-primary px-8">Contact Us</a>
+                <a href="services.html" class="btn bg-white text-secondary border border-gray-300 hover:bg-gray-50 px-8">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1">
+                    <a href="index.html" class="text-2xl font-bold">
+                        <span class="text-primary">OPTRIVEX</span> GLOBAL INC.
+                    </a>
+                    <p class="mt-4 text-gray-300">Empowering businesses through innovative solutions and global certifications.</p>
+                </div>
+                
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <address class="not-italic">
+                        <p class="flex items-center text-gray-300 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            info@optrivexglobal.cloud
+                        </p>
+                        <p class="flex items-start text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 flex-shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Bryggen 11,<br>5003 Bergen, Norway</span>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 OPTRIVEX GLOBAL INC. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle and navigation handling
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mainNav = document.getElementById('main-nav');
+        const mobileNav = document.getElementById('mobile-nav');
+        
+        // Toggle mobile menu
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Function to handle navigation clicks
+        function handleNavClick(event, isMobile = false) {
+            const navLinks = isMobile ? mobileNav.children : mainNav.children;
+            const clickedLink = event.target.closest('a');
+            
+            // Only process if it's a navigation link (not the Get Certified button)
+            if (clickedLink && !clickedLink.textContent.includes('Get Certified')) {
+                // Remove active class from all links
+                Array.from(navLinks).forEach(link => {
+                    if (!link.textContent.includes('Get Certified')) {
+                        link.classList.remove('text-primary', 'font-medium', 'bg-gray-50');
+                        link.classList.add('text-gray-700', 'hover:bg-gray-50');
+                        if (!isMobile) link.classList.add('hover:text-primary');
+                    }
+                });
+                
+                // Add active class to clicked link
+                clickedLink.classList.add('text-primary', 'font-medium');
+                if (isMobile) clickedLink.classList.add('bg-gray-50');
+                clickedLink.classList.remove('text-gray-700', 'hover:bg-gray-50');
+                if (!isMobile) clickedLink.classList.remove('hover:text-primary');
+                
+                // Close mobile menu if open
+                if (isMobile) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        }
+        
+        // Add click event listeners for desktop navigation
+        if (mainNav) {
+            mainNav.addEventListener('click', (e) => handleNavClick(e, false));
+        }
+        
+        // Add click event listeners for mobile navigation
+        if (mobileNav) {
+            mobileNav.addEventListener('click', (e) => handleNavClick(e, true));
+        }
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            // Navbar shadow on scroll
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+            
+            // Back to top button
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.remove('opacity-100', 'visible');
+                backToTop.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Back to top functionality
+        if (backToTop) {
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjust for fixed header
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add animation classes when elements come into view
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('animate-fade-in');
+                }
+            });
+        };
+        
+        // Initial check on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            animateOnScroll();
+        });
+        
+        // Check on scroll
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - OPTRIVEX GLOBAL INC.</title>
+    <meta name="description" content="Explore our comprehensive certification services including ISO 9001, ISO 14001, ISO 45001, and our exclusive certification programs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#F97316',
+                        secondary: '#1E293B',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer components {
+            .nav-link {
+                @apply px-4 py-2 text-gray-700 hover:text-primary transition-colors duration-300 relative;
+            }
+            .nav-link::after {
+                @apply content-[''] absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 -translate-x-1/2;
+            }
+            .nav-link:hover::after {
+                @apply w-3/4;
+            }
+            .btn {
+                @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+            }
+            .btn-primary {
+                @apply bg-primary text-white hover:bg-orange-600;
+            }
+            .card {
+                @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-200 shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-gray-200">
+                        <img src="assets/og.png" alt="Logo" class="w-full h-full object-contain">
+                    </div>
+                    <a href="index.html" class="text-xl font-bold text-gray-800">
+                        OPTRIVEX GLOBAL INC.
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-2">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="text-gray-700 hover:text-primary focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white shadow-lg rounded-b-lg" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-700 bg-gray-100 rounded-md">Services</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Contact</a>
+                <a href="./cms/verify.php" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Verify Certificate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="pt-32 pb-16 bg-gradient-to-r from-secondary to-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+            <p class="text-xl text-gray-200">Comprehensive certification solutions for your business</p>
+        </div>
+    </div>
+
+    <!-- Services Grid -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Certification Services</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We offer a wide range of internationally recognized certification services to help your business excel.</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ISO 9001 -->
+                <div class="card group" id="iso9001">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-secondary mb-3">ISO 9001</h3>
+                        <p class="text-gray-600 mb-4">Quality Management System certification to help organizations improve efficiency and customer satisfaction.</p>
+                        <a href="#contact" class="text-primary font-medium hover:underline inline-flex items-center">
+                            Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ISO 14001 -->
+                <div class="card group" id="iso14001">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-secondary mb-3">ISO 14001</h3>
+                        <p class="text-gray-600 mb-4">Environmental Management System certification to help organizations reduce environmental impact.</p>
+                        <a href="#contact" class="text-primary font-medium hover:underline inline-flex items-center">
+                            Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ISO 45001 -->
+                <div class="card group" id="iso45001">
+                    <div class="h-48 bg-gradient-to-r from-yellow-500 to-yellow-600 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-secondary mb-3">ISO 45001</h3>
+                        <p class="text-gray-600 mb-4">Occupational Health and Safety Management System to ensure a safe working environment.</p>
+                        <a href="#contact" class="text-primary font-medium hover:underline inline-flex items-center">
+                            Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ISO 27001 -->
+                <div class="card group" id="iso27001">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-secondary mb-3">ISO 27001</h3>
+                        <p class="text-gray-600 mb-4">Information Security Management System to protect your organization's information assets.</p>
+                        <a href="#contact" class="text-primary font-medium hover:underline inline-flex items-center">
+                            Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ISO 22000 -->
+                <div class="card group" id="iso22000">
+                    <div class="h-48 bg-gradient-to-r from-red-500 to-red-600 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-secondary mb-3">ISO 22000</h3>
+                        <p class="text-gray-600 mb-4">Food Safety Management System to ensure food safety throughout the food chain.</p>
+                        <a href="#contact" class="text-primary font-medium hover:underline inline-flex items-center">
+                            Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Global Excellence Certificate -->
+                <div class="card group" id="global-certificate">
+                    <div class="h-48 bg-gradient-to-r from-primary to-orange-600 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Global Excellence Certificate</h3>
+                        <p class="text-gray-600 mb-4">Our exclusive certification program designed to meet the highest standards of business excellence.</p>
+                        <button onclick="openAICertificateModal()" class="text-primary font-medium hover:underline inline-flex items-center">
+                            Generate Certificate
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1">
+                    <a href="index.html" class="text-2xl font-bold">
+                        <span class="text-primary">OPTRIVEX</span> GLOBAL INC.
+                    </a>
+                    <p class="mt-4 text-gray-300">Empowering businesses through innovative solutions and global certifications.</p>
+                </div>
+                
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <address class="not-italic">
+                        <p class="flex items-center text-gray-300 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            info@optrivexglobal.cloud
+                        </p>
+                        <p class="flex items-start text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 flex-shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Bryggen 11,<br>5003 Bergen, Norway</span>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 OPTRIVEX GLOBAL INC. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            // Navbar shadow on scroll
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+            
+            // Back to top button
+            if (window.scrollY > 300) {
+                backToTop?.classList.remove('opacity-0', 'invisible');
+                backToTop?.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop?.classList.remove('opacity-100', 'visible');
+                backToTop?.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Back to top functionality
+        if (backToTop) {
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        // Certificate Modal Functions
+        function openAICertificateModal() {
+            document.getElementById('aiCertificateModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+        
+        function closeAICertificateModal() {
+            document.getElementById('aiCertificateModal').classList.add('hidden');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+        
+        // Close modal when clicking outside the modal content
+        window.onclick = function(event) {
+            const modal = document.getElementById('aiCertificateModal');
+            if (event.target === modal) {
+                closeAICertificateModal();
+            }
+        }
+        
+        // Handle form submission
+        document.getElementById('certificateForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const certificateType = document.getElementById('certificateType').value;
+            const achievement = document.getElementById('achievement').value;
+            
+            // Generate certificate
+            generateCertificate(fullName, company, certificateType, achievement);
+        });
+        
+        function generateCertificate(name, company, type, achievement) {
+            // In a real app, you would make an API call to generate the certificate
+            // For this demo, we'll just show a success message
+            
+            // Show loading state
+            const resultDiv = document.getElementById('certificateResult');
+            resultDiv.innerHTML = `
+                <div class="text-center py-8">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                    <p class="text-gray-600">Generating your certificate...</p>
+                </div>
+            `;
+            
+            // Simulate API call
+            setTimeout(() => {
+                const certificateNumber = 'NOR-' + Math.floor(100000 + Math.random() * 900000);
+                const issueDate = new Date().toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
+                
+                resultDiv.innerHTML = `
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                        <div class="text-green-500 mb-4">
+                            <svg class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Certificate Generated Successfully!</h3>
+                        <p class="text-gray-600 mb-6">Your certificate has been generated and is ready to download.</p>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6 text-left">
+                            <h4 class="font-medium text-gray-800 mb-2">Certificate Details:</h4>
+                            <ul class="space-y-1 text-sm text-gray-600">
+                                <li><span class="font-medium">Name:</span> ${name}</li>
+                                <li><span class="font-medium">Company:</span> ${company}</li>
+                                <li><span class="font-medium">Certificate Type:</span> ${document.getElementById('certificateType').options[document.getElementById('certificateType').selectedIndex].text}</li>
+                                <li><span class="font-medium">Achievement:</span> ${achievement}</li>
+                                <li><span class="font-medium">Certificate #:</span> ${certificateNumber}</li>
+                                <li><span class="font-medium">Issue Date:</span> ${issueDate}</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+                            <button onclick="downloadCertificate()" class="px-6 py-2 bg-primary text-white rounded-md hover:bg-orange-600 transition-colors flex items-center justify-center">
+                                <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Download PDF
+                            </button>
+                            <button onclick="printCertificate()" class="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
+                                <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                                </svg>
+                                Print Certificate
+                            </button>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-gray-200">
+                            <p class="text-sm text-gray-500">Need help? <a href="contact.html" class="text-primary hover:underline">Contact our support team</a></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+                
+                // Scroll to result
+                resultDiv.scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
+        }
+        
+        function downloadCertificate() {
+            // In a real app, this would generate and download a PDF
+            alert('In a real application, this would download the certificate as a PDF.');
+        }
+        
+        function printCertificate() {
+            // In a real app, this would open the print dialog for the certificate
+            window.print();
+        }
+    </script>
+</body>
+</html>
